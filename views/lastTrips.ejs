@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/9b9223f10d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>🚆 🐿️ Tic & Tac 🐿️ 🚆</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <%- include('header');%>
+
+    <div class="container-fluid">
+        <div class="main-container">
+
+            <% if (myBookings.length === 0) {%>
+                <h4 class="titleForm">No trips yet.</h4>   
+                <a href="/home" class="btn">Home</a> 
+            <%} else {%>
+
+        <h4 class="titleForm mb-4">My Last Trips :</h4>
+        <table class="table table-light table-borderless">
+            <thead>
+                <tr>
+                    <th scope="col">Date</th>
+                    <th scope="col">Journey</th>
+                    <th scope="col">Departure Time</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% myBookings.forEach(trip => {%>
+                <tr>
+                    <td><%=formatDate(new Date(trip.date))%></td>
+                    <td><%=trip.departure%> - <%=trip.arrival%></td>
+                    <td><%=trip.departureTime%></td>
+                    <td><%=trip.price%> €</td>
+                </tr>
+                <%});%>
+            </tbody>
+        </table>
+        <a href='/home' class="btn">Home</a>
+    <%}%>
+
+        </div>
+        <%-include('footer');%>
+    </div>
+    <!-- SCRIPTS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>

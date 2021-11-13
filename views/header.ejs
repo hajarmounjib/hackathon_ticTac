@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/9b9223f10d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>🚆 🐿️ Tic & Tac 🐿️ 🚆</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+        <div class="container d-flex justify-content-between">
+            <div>
+                <a href='/home'><img src="./images/train.png" height="30" atl="train-logo"><span class="tictac">Tic & Tac</span></a>
+            </div> 
+            <div>
+                <% if (user !== undefined) {%>
+                    <a href="/log-out" class="login-nav pr-2">Log out</a>
+                <%} else {%>
+                    <a href="/" class="login-nav pr-2">Log in</a>
+                <%}%>    
+                    <a href="/last-trips" class="trips-nav">My Last Trips</a>
+            </div> 
+        </div>
+    </nav> 
+
+    <!-- SCRIPTS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>

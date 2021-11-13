@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/9b9223f10d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <title>🚆 🐿️ Tic & Tac 🐿️ 🚆</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <%- include('header');%>
+    <div class="container-fluid">
+
+    <div class="main-container d-flex">
+        <!-- SIGN IN -->
+            <div class="col-12 col-sm-6 text-center">
+
+                <div class="formArea">
+        
+                    <h4 class="titleForm mb-4">Sign In</h4>
+        
+                    <form action="/sign-in" method="POST">
+                    <div class="form-group">
+                        <input name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input name="password" type="password" class="form-control" placeholder="Password">
+                    </div>
+                        <button type="submit" class="btn">Confirm</button>
+                    </form>
+                </div>
+            </div>
+
+        <!-- SIGN UP -->
+        <div class="col-12 col-sm-6 text-center">
+
+            <div class="formArea">
+
+              <h4 class="titleForm mb-4">Sign Up</h4>
+
+              <form action="/sign-up" method="POST">
+                <div class="form-group">
+                  <input name="first_name" type="text" class="form-control" placeholder="First Name">
+                </div>
+                <div class="form-group">
+                    <input name="last_name" type="text" class="form-control" placeholder="Last Name">
+                  </div>
+                <div class="form-group">
+                  <input name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Email">
+                </div>
+                <div class="form-group">
+                  <input name="password" type="password" class="form-control"  placeholder="Password">
+                </div>
+                <button type="submit" class="btn">Confirm</button>
+              </form>
+            </div>
+
+          </div>
+
+      </div>
+      <!-- Messages when log in or sign up errors -->
+      <div>
+       <% if (message) {%>
+          <p class="titleForm mt-3"><%=message%></p>
+       <%}%>
+      </div>
+
+      <%-include('footer');%>
+</div>
+    <!-- SCRIPTS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="/javascripts/script.js"></script>
+</body>
+</html>

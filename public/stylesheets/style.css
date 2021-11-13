@@ -1,0 +1,117 @@
+body {
+  margin: auto;
+  padding: 0;
+  height: 100%;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  --main-red: #da424b;
+}
+
+/* Header nav */
+a,
+a:hover {
+  text-decoration: none;
+}
+.login-nav,
+.login-nav:hover {
+  text-decoration: none;
+  color: var(--main-red);
+  font-weight: bold;
+}
+.trips-nav,
+.trips-nav:hover {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+.tictac,
+.tictac:hover {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* Buttons */
+button,
+.btn,
+.btn:hover {
+  background-color: var(--main-red);
+  color: white;
+  text-decoration: none;
+}
+
+/* Page Container */
+.container-fluid {
+  height: 100vh;
+  background: linear-gradient(#c3ddea, #3484b5);
+  text-align: center;
+}
+.main-container {
+  margin: auto;
+  width: 70%;
+  padding-top: 100px;
+}
+
+/* Forms */
+.formArea {
+  margin: auto;
+}
+.titleForm {
+  color: white;
+}
+
+/* Tables & cards */
+table,
+.card {
+  color: black;
+  margin: 0;
+}
+i {
+  color: var(--main-red);
+}
+
+/* Footer */
+.sticky-footer {
+  color: white;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 90px);
+  height: 30px;
+}
+
+/* POP UP */
+.bg-modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.modal-content {
+  width: 600px;
+  height: 300px;
+  background-color: white;
+  border-radius: 4px;
+  text-align: center;
+  padding: 20px;
+}
+
+.message {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: var(--main-red);
+}
+.popup-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+}
+.width-button {
+  width: 250px;
+}

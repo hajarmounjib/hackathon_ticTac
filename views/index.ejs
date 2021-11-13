@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/9b9223f10d.js" crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> 
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>🚆 🐿️ Tic & Tac 🐿️ 🚆</title>
+    <link rel='stylesheet' href='stylesheets/style.css' />
+  </head>
+  <body>
+    <div class="header">
+    <%- include('header');%>
+  </div>
+  <div class="container-fluid">
+    <div class="main-container d-flex flex-column align-items-center justify-content-between">
+
+      <div class="formArea mb-5">
+        <h4 class="titleForm">One way ticket :</h4>
+        <form class="form-inline" action="/results" method="POST">
+        <div class="form-group d-flex justify-content-center mt-4">
+            <input name="from" type="text" class="form-control mr-4" placeholder="From : Paris, Marseille...">
+            <input name="to" type="text" class="form-control mr-4" placeholder="To : Lille, Nantes...">
+            <input name="date" type="date" class="form-control mr-4">
+            <button type="submit" class="btn">Go</button>
+        </div>    
+        </form>
+    </div>
+
+    <div class="travel-image">
+      <img src="/images/landmark.png" height="300" alt="landmark">
+    </div>
+  </div>
+  <%- include('footer');%>
+</div>
+
+    <!-- SCRIPTS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="/javascripts/script.js"></script>
+
+  </body>
+</html>
